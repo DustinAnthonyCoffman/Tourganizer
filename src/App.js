@@ -1,11 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div>
-      <Tours />
+     <h1>AYEEEEEEEEEE</h1>
     </div>
   );
 }
