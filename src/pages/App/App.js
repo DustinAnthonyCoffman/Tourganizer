@@ -14,6 +14,7 @@ class App extends Component {
     this.state = {
       // Initialize user if there's a token, otherwise null
       user: userService.getUser()
+
     };
   }
   handleLogout = () => {
