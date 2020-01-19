@@ -1,11 +1,26 @@
 import React, {Component} from 'react';
 import './App.css';
-import { Route, Switch, Redirect } from 'react-router-dom';
-import ToursPage from '../ToursPage/ToursPage'
+import { Route, Switch, Redirect, NavLink } from 'react-router-dom';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
+import TourListPage from '../TourListPage/TourListPage';
+import AddTourPage from '../AddTourPage/AddTourPage';
+import TourDetailPage from '../TourDetailPage/TourDetailPage';
+import EditTourPage from '../EditTourPage/EditTourPage';
 import userService from '../../utils/userService';
 import tokenService from '../../utils/tokenService';
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 class App extends Component {
@@ -13,8 +28,8 @@ class App extends Component {
     super();
     this.state = {
       // Initialize user if there's a token, otherwise null
-      user: userService.getUser()
-
+      user: userService.getUser(),
+      tours: []
     };
   }
   handleLogout = () => {
@@ -24,18 +39,27 @@ class App extends Component {
   handleSignupOrLogin = () => {
     this.setState({user: userService.getUser()});
   }
-
+  
   render() {
-
     return (
       <div>
-        <Switch>
-          <Route exact path='/' render={() =>
-            <ToursPage
+        <header className="App-header">
+          Tourganizer
+          <nav>
+            <NavLink exact to='/'>Tour List</NavLink>
+            <NavLink exact to='/add'>Add Tour</NavLink>
+          </nav>
+        </header>
+            <TourListPage
               handleLogout={this.handleLogout}
+              tours={this.state.tours}
+              handleDeleteTour={this.handleDeleteTour}
               user={this.state.user}
             />
-          }/>
+          <Route exact path='/add' render={() => 
+            <AddTourPage />
+          } />
+        <Switch>
           <Route exact path='/signup' render={({ history }) => 
             <SignupPage
               history={history}

@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 
 
 const tourSchema = new Schema({
+    name: String,
     shows: [
         {
             type: Schema.Types.ObjectId,
