@@ -10,9 +10,10 @@ class AddTourPage extends Component {
 
   formRef = React.createRef();
 
+  //e is the event object that is passed into any function that fires an event
   handleSubmit = e => {
-    e.preventDefault();
-    this.props.handleAddTour(this.state.formData);
+    e.preventDefault(); //stops the page from refreshing, which is htmls default because of our shitty past
+    this.props.handleAddTour(this.state.formData);  //updates the form as we type to overwrite formData declared in state
   };
 
   handleChange = e => {
@@ -30,7 +31,7 @@ return (
     <h1>Add Tour</h1>
     <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
         <div className="form-group">
-        <label>Tour Name (required)</label>
+        <label>Tour Name</label>
         <input
             className="form-control"
             name="name"

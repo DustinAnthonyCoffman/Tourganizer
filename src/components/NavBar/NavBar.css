@@ -1,7 +1,8 @@
 .NavBar {
     display: flex;
     justify-content: center;
-    margin: 0 0 20px;
+
+    background-color: aquamarine;
   }
   
   .NavBar-link {
