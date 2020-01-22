@@ -6,7 +6,7 @@ function TourListItem({tour, handleDeleteTour}) {
 
 return (
 <div>
-  
+<h2>{tour.name}</h2>
     <Link to={{
         pathname: '/details',
         state: {tour}

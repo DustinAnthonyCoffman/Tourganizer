@@ -1,4 +1,3 @@
-
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -11,7 +10,9 @@ const tourSchema = new Schema({
 			ref: 'Show'
         }
     ]
-})
+}, 
+{timestamps: true}
+)
 
 
 module.exports = mongoose.model('Tour', tourSchema)

@@ -37,7 +37,6 @@ return (
             name="name"
             value={this.state.formData.name}
             onChange={this.handleChange}
-            required
         />
         </div>
 

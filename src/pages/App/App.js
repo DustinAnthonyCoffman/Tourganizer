@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import { Route, Switch, Redirect, NavLink } from 'react-router-dom';
+import * as tourAPI from '../../services/tours-api';
 
 import TourListPage from '../TourListPage/TourListPage';
 import AddTourPage from '../AddTourPage/AddTourPage';
@@ -8,7 +9,6 @@ import AddTourPage from '../AddTourPage/AddTourPage';
 // import EditTourPage from '../EditTourPage/EditTourPage';
 import userService from '../../utils/userService';
 import tokenService from '../../utils/tokenService';
-// import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Navbar from '../../components/NavBar/NavBar'
 
@@ -39,8 +39,9 @@ class App extends Component {
   handleAddTour = ({name}) => {
     //fetch request to controller responsible for Creating a tour
     //fetch is only making an api request, its the bellboy going to the kitchen for the user
-    fetch('/', { //asks server (containing the routes) for this matching route to the controller,{} holds our sending payload
-      method: 'POST',
+    fetch('/api/tours', { //asks server (containing the routes) for this matching route to the controller,{} holds our sending payload
+      method: 'POST',  
+      headers: {'content-type': 'application/json'},
       body: JSON.stringify({name})  //this is req.body.name
     }) 
     .then(response => { //once you get the api response, convert it
@@ -49,27 +50,15 @@ class App extends Component {
     
     .then(jsonData => {
       this.setState(prevState => ({
-
       }))
     })
-    // .then(jsonData => {     //this is where you can call setState because we now have something to set the state with 
-    //   this.setState(prevState => (  //now we setState using the immediate return of the arrow ()
-    //     prevState.length === null ? 
-    //     {
-    //       tours: [...prevState, jsonData] // ...prevState allows us to keep previous data when updating state with new data
-    //     }
-
-    //     :
-
-    //     {
-    //       tours: [jsonData]
-    //     }
-    //    )) 
-    // })
   }
 
 
-
+  async componentDidMount() {
+    const tours = await tourAPI.getAll();
+    this.setState({tours});
+  }
 
 
   render() {
@@ -82,7 +71,7 @@ class App extends Component {
                   handleSignupOrLogin={this.handleSignupOrLogin}
                   />
           <Route exact path='/' render={() => 
-            <TourListPage 
+            <TourListPage
               handleLogout={this.handleLogout}
               tours={this.state.tours}
               handleDeleteTour={this.handleDeleteTour}

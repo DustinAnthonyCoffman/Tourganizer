@@ -1,9 +1,16 @@
 const Tour = require('../models/tour');
 
 
+module.exports = {
+    index,
+    show,
+    create,
+    delete: deleteOne,
+    update
+  };
+
 
 async function index(req, res) {
-    console.log('inside the index')
     try {
         const tours = await Tour.find({});
         res.status(200).json(tours);
@@ -30,7 +37,6 @@ async function show(req, res) {
 }
 
 async function create(req, res) {
-    console.log(req.body.name)
      try {
          const tour = await Tour.create(req.body);
          tour.save(err => {
@@ -71,11 +77,3 @@ async function update(req, res) {
 
 }
 
-
-module.exports = {
-    index,
-    show,
-    create,
-    delete: deleteOne,
-    update
-  };

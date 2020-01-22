@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var toursCtrl = require('../../controllers/tours');
 
-/* GET /api/puppies */
+
 router.get('/', toursCtrl.index);
 router.get('/:id', toursCtrl.show);
 router.post('/', toursCtrl.create);
