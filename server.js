@@ -1,16 +1,21 @@
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
+const cors = require('cors');
 const logger = require('morgan');
-// const mongoose = require('mongoose');
+
 
 const app = express();
 
 require('dotenv').config();
 require('./config/database')
 
+app.use(cors())
 app.use(logger('dev'));
 app.use(express.json());
+
+
+app.use(express.urlencoded({extended: false}))
 
 // Configure both serve-favicon & static middlewares
 // to serve from the production 'build' folder

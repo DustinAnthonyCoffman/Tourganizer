@@ -1,22 +1,15 @@
 import React from 'react';
-
-
+import './Footer.css';
 
 
 
 const Footer = (props) => {
     let footer = props.user ?
-      <div>
-    <ul>
-          <li>Facebook</li>
-          <li>Instagram</li>
-          <li>Github</li>
-          <li>Email</li>
-      </ul>
+      <div className="Footer">
       </div>
       :
       <div>
-          <h2>You need to login</h2>
+          <h2>Please login</h2>
       </div>;
   
     return (

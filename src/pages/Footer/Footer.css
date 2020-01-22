@@ -1,16 +1,13 @@
-.NavBar {
+.Footer {
     width: 100%;
-    height: 50px;
+    height: 10px;
     position: absolute;
-    top: 0;
+    bottom: 0;
     background-color: aquamarine;
   }
   
-  .NavBar-link {
+  .Footer-link {
     margin: 10px 20px;
     margin-top: 50px;
   }
   
-  .NavBar-welcome {
-    color: grey;
-  }

@@ -27,6 +27,7 @@ class App extends Component {
       tours: []
     };
   }
+
   handleLogout = () => {
     userService.logout();
     this.setState({ user: null });
@@ -46,20 +47,25 @@ class App extends Component {
       return response.json() //convert the api request to a json object so react can use it, if you dont convert you just get a readable stream
     }) 
     
-    .then(jsonData => {     //this is where you can call setState because we now have something to set the state with 
-      this.setState(prevState => (  //now we setState using the immediate return of the arrow ()
-        prevState.length === 0 ? 
-        {
-          tours: [...prevState, jsonData] // ...prevState allows us to keep previous data when updating state with new data
-        }
+    .then(jsonData => {
+      this.setState(prevState => ({
 
-        :
-
-        {
-          tours: [jsonData]
-        }
-       )) 
+      }))
     })
+    // .then(jsonData => {     //this is where you can call setState because we now have something to set the state with 
+    //   this.setState(prevState => (  //now we setState using the immediate return of the arrow ()
+    //     prevState.length === null ? 
+    //     {
+    //       tours: [...prevState, jsonData] // ...prevState allows us to keep previous data when updating state with new data
+    //     }
+
+    //     :
+
+    //     {
+    //       tours: [jsonData]
+    //     }
+    //    )) 
+    // })
   }
 
 
@@ -78,7 +84,6 @@ class App extends Component {
           <Route exact path='/' render={() => 
             <TourListPage 
               handleLogout={this.handleLogout}
-              name={this.state.tours.name}
               tours={this.state.tours}
               handleDeleteTour={this.handleDeleteTour}
               user={this.state.user}
@@ -91,9 +96,8 @@ class App extends Component {
                   handleAddTour={this.handleAddTour}
                   />
               } />
-
         </header>
-        <Footer />
+        <Footer user={this.state.user}/>
       </div>
     );
   }
