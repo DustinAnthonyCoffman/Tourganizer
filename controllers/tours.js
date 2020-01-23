@@ -64,12 +64,6 @@ try {
 
 
 async function deleteOne(req, res) {
-    console.log('now we should have something in our req.user')
-    console.log('---------------------------------------------------')
-    console.log('---------------------------------------------------')
-    console.log('---------------------------------------------------')
-    console.log(req.params.id)
-    console.log(req.body)
     try {
             let tourIndex = req.params.id;
             User.findById(req.body.userId, function(err, user) {

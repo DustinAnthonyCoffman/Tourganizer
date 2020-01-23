@@ -2,13 +2,15 @@ import React, {Component} from 'react';
 import './App.css';
 import { Route, Switch, Redirect, NavLink } from 'react-router-dom';
 import * as tourAPI from '../../services/tours-api';
+import * as showAPI from '../../services/shows-api';
 import TourListPage from '../TourListPage/TourListPage';
 import AddTourPage from '../AddTourPage/AddTourPage';
 import userService from '../../utils/userService';
 import tokenService from '../../utils/tokenService';
-import Footer from '../Footer/Footer';
+import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/NavBar/NavBar';
 import { makeStyles } from '@material-ui/core/styles';
+import AddShowPage from '../AddShowPage/AddShowPage';
 
 
 
@@ -57,7 +59,8 @@ class App extends Component {
     this.state = {
       // Initialize user if there's a token, otherwise null 
       user: userService.getUser(),
-      tours: []
+      tours: [],
+      shows: []
     };
   }
 
@@ -91,7 +94,7 @@ class App extends Component {
   }
 
   handleAddShow = async (id, userId) => {
-    await tourAPI.addShow(id, userId);
+    await showAPI.addShow(id, userId);
     this.setState(state => ({
       shows: state.shows.filter(s => s._id !== id)
     }), () => this.props.history.push('/'));
@@ -106,7 +109,7 @@ class App extends Component {
                   handleSignupOrLogin={this.handleSignupOrLogin}
                   />
           <Route exact path='/' render={() => 
-            <TourListPage
+           <TourListPage
               handleLogout={this.handleLogout}
               tours={this.state.tours}
               handleDeleteTour={this.handleDeleteTour}
@@ -118,6 +121,13 @@ class App extends Component {
                   tours={this.state.tours} 
                   user={this.state.user} 
                   handleAddTour={this.handleAddTour}
+                  />
+              } />
+            <Route exact path='/addShow' render={() => 
+                <AddShowPage 
+                  tours={this.state.tours} 
+                  user={this.state.user} 
+                  handleAddShow={this.handleAddShow}
                   />
               } />
                 

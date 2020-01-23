@@ -9,7 +9,6 @@ const SALT_ROUNDS = 6;
 const showSchema = new Schema({
     lineup: String,
     venue: String,
-    date: Date,
     address: String,
     city: String,
     state: String,

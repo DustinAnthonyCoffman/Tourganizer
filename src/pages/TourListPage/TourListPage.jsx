@@ -13,15 +13,15 @@ class TourListPage extends Component {
 
 // let getTours = props.user ? {} if there is no user dont run async
 
-  async componentDidMount() {
-    try {
-    const user = await tourAPI.getAll(this.props.user._id);
-    const tours = user.tours
-    this.setState({tours});
-    } catch(error) {
-      throw new Error(error)
-    }
+async componentDidMount() {
+  try {
+  const user = await tourAPI.getAll(this.props.user._id);
+  const tours = user.tours
+  this.setState({tours});
+  } catch(error) {
+    throw new Error(error)
   }
+}
 
 render() {
   return (

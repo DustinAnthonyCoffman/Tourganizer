@@ -3,7 +3,7 @@
     height: 50px;
     position: absolute;
     top: 0;
-    background-color: rgb(54, 48, 165);
+    background-color: rgb(133, 201, 254);
   }
   
   .NavBar-link {
@@ -13,7 +13,7 @@
     margin-top: 50px;
   }
   .NavBar-link:hover {
-    color: rgb(174, 216, 231);
+    color: rgb(0, 9, 12);
 
   }
   

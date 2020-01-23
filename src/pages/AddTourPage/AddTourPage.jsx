@@ -63,7 +63,7 @@ return (
           className="btn"
           disabled={this.state.invalidForm}
           >
-          ADD Tour
+          Add Tour
         </Button>
     </form>
     </>
