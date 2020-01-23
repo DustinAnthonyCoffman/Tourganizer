@@ -3,7 +3,6 @@ const User = require('../models/user');
 
 module.exports = {
     index,
-    show,
     create,
     delete: deleteOne,
     update
@@ -13,7 +12,6 @@ module.exports = {
 async function index(req, res) {
     try {
         const user = await User.findById(req.body.user);
-        // res.status(200).json(user.tours);
         res.status(200).json(user);
         
     } catch (error) {
@@ -23,20 +21,6 @@ async function index(req, res) {
     }
 }
 
-
-
-async function show(req, res) {
-    try {
-        const tour = await Tour.findById(req.params.id);
-        res.status(200).json(tour);
-        
-    } catch (error) {
-        console.error(error)
-        throw new Error(error)
-        
-    }
-
-}
 
 async function create(req, res) {
 try {

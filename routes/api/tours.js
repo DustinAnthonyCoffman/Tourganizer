@@ -4,7 +4,6 @@ var toursCtrl = require('../../controllers/tours');
 
 
 router.post('/get', toursCtrl.index);
-router.get('/:id', toursCtrl.show);
 router.post('/', toursCtrl.create);
 router.post('/:id', toursCtrl.delete);
 router.put('/:id', toursCtrl.update);

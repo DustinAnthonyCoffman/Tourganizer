@@ -41,8 +41,6 @@ class AddShowPage extends Component {
   return (
       <>
       <h1>Add Show</h1>
-
-
       <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
           <div className="form-group">
           <label>Lineup</label>

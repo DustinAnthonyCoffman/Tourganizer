@@ -108,7 +108,7 @@ class App extends Component {
                   user={this.state.user}    
                   handleSignupOrLogin={this.handleSignupOrLogin}
                   />
-          <Route exact path='/' render={() => 
+          <Route exact path='/tours' render={() => 
            <TourListPage
               handleLogout={this.handleLogout}
               tours={this.state.tours}

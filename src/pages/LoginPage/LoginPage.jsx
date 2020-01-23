@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './LoginPage.css';
 import userService from '../../utils/userService';
+import Button from '@material-ui/core/Button';
 
 class LoginPage extends Component {
   
@@ -49,8 +50,8 @@ class LoginPage extends Component {
           </div>
           <div className="form-group">
             <div className="col-sm-12 text-center">
-              <button className="btn btn-default">Log In</button>&nbsp;&nbsp;&nbsp;
-              <Link to='/'>Cancel</Link>
+              <Button className="btn btn-default">Log In</Button>&nbsp;&nbsp;&nbsp;
+              <Link className="cancel" to='/'>Cancel</Link>
             </div>
           </div>
         </form>
