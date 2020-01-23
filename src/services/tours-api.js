@@ -1,7 +1,8 @@
 
 
 export function create(tour) {
-    return fetch('/', {
+    console.log(tour)
+    return fetch('/api/tours', {
         method: 'POST',
         headers: {'content-type': 'application/json'},
         body: JSON.stringify(tour)
@@ -9,26 +10,30 @@ export function create(tour) {
 }
 
 
-export function getAll() {
-  try{
-    return fetch('/api/tours')
+export function getAll(user) {
+    try {
+    return fetch('/api/tours/get',  {
+        method: 'POST',
+        headers: {'content-type': 'application/json'},
+        body: JSON.stringify({user})})
     .then(res => res.json())
   }
   catch(error) {
     throw new Error(error)
   }
-
 }
 
-export function deleteOne(id) {
-    return fetch(`${'/'}/${id}`, {
-        method: 'DELETE'
+export function deleteOne(id, userId) {
+    return fetch(`/api/tours/${id}`, {
+        method: 'POST',
+        headers: {'content-type': 'application/json'},
+        body: JSON.stringify({userId})
     }).then(res => res.json());
 }
 
 
 export function update(tour) {
-    return fetch(`${'/'}/${tour._id}`, {
+    return fetch(`${'/api/tours'}/${tour._id}`, {
         method: 'PUT',
         headers: {'content-type': 'application/json'},
         body: JSON.stringify(tour)

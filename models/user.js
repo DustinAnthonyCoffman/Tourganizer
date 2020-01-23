@@ -6,20 +6,31 @@ const Schema = mongoose.Schema;
 const SALT_ROUNDS = 6;
 
 
+const showSchema = new Schema({
+    lineup: String,
+    venue: String,
+    date: Date,
+    address: String,
+    city: String,
+    state: String,
+    pay: Number,
+    confirmed: Boolean
+  })
+
+const tourSchema = new Schema({
+    name: String,
+    shows: [showSchema]
+  })
 
 const userSchema = new Schema({
     name: String,
     email: {type: String, required: true, lowercase: true, unique: true},
     password: String,
-    tours: [
-        {
-            type: Schema.Types.ObjectId,
-			ref: 'Tour'
-        }
-    ]
+    tours: [tourSchema]
 }, {
     timestamps: true
 });
+
 
 userSchema.set('toJSON', {
 transform: function(doc, ret) {

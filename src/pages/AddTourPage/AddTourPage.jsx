@@ -4,7 +4,8 @@ class AddTourPage extends Component {
   state = {
     invalidForm: true,
     formData: {
-      name: ''
+      name: '',
+      user: this.props.user
     }
   };
 
@@ -26,6 +27,7 @@ class AddTourPage extends Component {
 
 
 render() {
+
 return (
     <>
     <h1>Add Tour</h1>
@@ -36,6 +38,11 @@ return (
             className="form-control"
             name="name"
             value={this.state.formData.name}
+            onChange={this.handleChange}
+        />
+        <input type="hidden"
+            name="user"
+            value={this.props.user._id}
             onChange={this.handleChange}
         />
         </div>

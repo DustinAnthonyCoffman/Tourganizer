@@ -1,0 +1,11 @@
+.tour {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+
+}
+.tourName {
+    padding: 10px;
+    color: white;
+}

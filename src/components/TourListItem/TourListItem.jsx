@@ -1,12 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import './TourListItem.css';
 
 
-function TourListItem({tour, handleDeleteTour}) { 
-
+function TourListItem({tour, userId, handleDeleteTour}) { 
 return (
-<div>
-<h2>{tour.name}</h2>
+<div className="tour">
+<h2 className="tourName">{tour.name}</h2>
     <Link to={{
         pathname: '/details',
         state: {tour}
@@ -21,7 +21,7 @@ return (
     >
         EDIT
     </Link>
-    <button onClick={() => handleDeleteTour(tour._id)}>
+    <button onClick={() => handleDeleteTour(tour._id, userId)}>
         DELETE
     </button>
 

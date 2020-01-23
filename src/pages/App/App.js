@@ -15,7 +15,7 @@ import Navbar from '../../components/NavBar/NavBar'
 
 
 
-
+// let nav = props.user ? something should tell the browser if there is a user or not then route to the signup or login 
 
 
 class App extends Component {
@@ -36,28 +36,25 @@ class App extends Component {
     this.setState({user: userService.getUser()});
   }
 
-  handleAddTour = ({name}) => {
+  handleAddTour = (name) => {
     //fetch request to controller responsible for Creating a tour
     //fetch is only making an api request, its the bellboy going to the kitchen for the user
     fetch('/api/tours', { //asks server (containing the routes) for this matching route to the controller,{} holds our sending payload
       method: 'POST',  
       headers: {'content-type': 'application/json'},
-      body: JSON.stringify({name})  //this is req.body.name
+      body: JSON.stringify(name)  //this is req.body.name
     }) 
-    .then(response => { //once you get the api response, convert it
-      return response.json() //convert the api request to a json object so react can use it, if you dont convert you just get a readable stream
-    }) 
-    
     .then(jsonData => {
       this.setState(prevState => ({
       }))
     })
   }
 
-
-  async componentDidMount() {
-    const tours = await tourAPI.getAll();
-    this.setState({tours});
+  handleDeleteTour = async (id, userId) => {
+    await tourAPI.deleteOne(id, userId);
+    this.setState(state => ({
+      tours: state.tours.filter(t => t._id !== id)
+    }), () => this.props.history.push('/'));
   }
 
 
