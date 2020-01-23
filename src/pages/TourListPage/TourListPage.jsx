@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import TourListItem from '../../components/TourListItem/TourListItem';
-import TourDetailPage from '../TourDetailPage/TourDetailPage';
 import * as tourAPI from '../../services/tours-api';
 
 
@@ -11,6 +10,8 @@ class TourListPage extends Component {
     state = {
       tours: this.props.tours
     }
+
+// let getTours = props.user ? {} if there is no user dont run async
 
   async componentDidMount() {
     try {

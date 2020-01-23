@@ -3,12 +3,18 @@
     height: 50px;
     position: absolute;
     top: 0;
-    background-color: aquamarine;
+    background-color: rgb(54, 48, 165);
   }
   
   .NavBar-link {
+    text-decoration: none;
+    color: grey;
     margin: 10px 20px;
     margin-top: 50px;
+  }
+  .NavBar-link:hover {
+    color: rgb(174, 216, 231);
+
   }
   
   .NavBar-welcome {

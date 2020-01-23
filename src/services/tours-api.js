@@ -8,6 +8,14 @@ export function create(tour) {
         body: JSON.stringify(tour)
     }).then(res => res.json());
 }
+export function addShow(show) {
+    console.log(show)
+    return fetch('/api/shows', {
+        method: 'POST',
+        headers: {'content-type': 'application/json'},
+        body: JSON.stringify(show)
+    }).then(res => res.json());
+}
 
 
 export function getAll(user) {

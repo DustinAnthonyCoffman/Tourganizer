@@ -1,4 +1,12 @@
 import React, {Component} from 'react';
+import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+
+
+
+
+
+
 
 class AddTourPage extends Component {
   state = {
@@ -27,7 +35,7 @@ class AddTourPage extends Component {
 
 
 render() {
-
+  
 return (
     <>
     <h1>Add Tour</h1>
@@ -48,13 +56,15 @@ return (
         </div>
 
 
-        <button
-        type="submit"
-        className="btn"
-        disabled={this.state.invalidForm}
-        >
-        ADD Tour
-        </button>
+        <Button
+          variant="contained"
+          color="primary"
+          type="submit"
+          className="btn"
+          disabled={this.state.invalidForm}
+          >
+          ADD Tour
+        </Button>
     </form>
     </>
 );

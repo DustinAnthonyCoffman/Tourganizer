@@ -2,21 +2,54 @@ import React, {Component} from 'react';
 import './App.css';
 import { Route, Switch, Redirect, NavLink } from 'react-router-dom';
 import * as tourAPI from '../../services/tours-api';
-
 import TourListPage from '../TourListPage/TourListPage';
 import AddTourPage from '../AddTourPage/AddTourPage';
-// import TourDetailPage from '../TourDetailPage/TourDetailPage';
-// import EditTourPage from '../EditTourPage/EditTourPage';
 import userService from '../../utils/userService';
 import tokenService from '../../utils/tokenService';
 import Footer from '../Footer/Footer';
-import Navbar from '../../components/NavBar/NavBar'
+import Navbar from '../../components/NavBar/NavBar';
+import { makeStyles } from '@material-ui/core/styles';
+
 
 
 
 
 // let nav = props.user ? something should tell the browser if there is a user or not then route to the signup or login 
 
+
+const useStyles = makeStyles(theme => ({
+  icon: {
+    marginRight: theme.spacing(2),
+  },
+  heroContent: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(8, 0, 6),
+  },
+  heroButtons: {
+    marginTop: theme.spacing(4),
+  },
+  cardGrid: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+  },
+  card: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  cardMedia: {
+    paddingTop: '56.25%', // 16:9
+  },
+  cardContent: {
+    flexGrow: 1,
+  },
+  footer: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(6),
+  },
+}));
+
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 class App extends Component {
   constructor() {
@@ -57,12 +90,17 @@ class App extends Component {
     }), () => this.props.history.push('/'));
   }
 
+  handleAddShow = async (id, userId) => {
+    await tourAPI.addShow(id, userId);
+    this.setState(state => ({
+      shows: state.shows.filter(s => s._id !== id)
+    }), () => this.props.history.push('/'));
+  }
 
   render() {
     return (
       <div>
         <header className="App-header">
-          Tourganizer
           <Navbar handleLogout={this.handleLogout}   
                   user={this.state.user}    
                   handleSignupOrLogin={this.handleSignupOrLogin}
@@ -82,11 +120,14 @@ class App extends Component {
                   handleAddTour={this.handleAddTour}
                   />
               } />
+                
         </header>
         <Footer user={this.state.user}/>
       </div>
     );
   }
 }
+
+
 
 export default App;
