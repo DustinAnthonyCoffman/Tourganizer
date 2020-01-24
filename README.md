@@ -1,4 +1,4 @@
-## [**Tourganizer**](https://tourganizer.herokuapp.com/)### <a name="home"></a> **Contents**
+## [**Tourganizer**](https://tourganizer.herokuapp.com/) <a name="home"></a> **Contents**
 
 1. [An app designed for bands to help organize tours](#desc)
 
