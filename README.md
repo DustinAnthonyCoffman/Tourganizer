@@ -8,8 +8,6 @@
 
 4. [Tech](#tech)
 
-5. [Unresolved issues](#issues)
-
 6. [Future Enhancements](#stretch)## <a name="desc"></a> **Description**
 
 ________________PROJECT DESCRIPTION[top](#home)## <a name="start"></a> **Getting Started**
@@ -26,16 +24,15 @@ ________________* MongoDB/Mongoose
 
 * Node[top](#home)## <a name="issues"></a> **Unresolved Issues**
 
+* MaterialUI
+
+* Mongoose
+
+
+
+
 ________________* OUTSTANDING ISSUES[top](#home)## <a name="stretch"></a> **Future Enhancements**
 
 ________________* things you want to improve[top](#home)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
