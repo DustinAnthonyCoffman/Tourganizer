@@ -1,61 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [**Tourganizer**](https://tourganizer.herokuapp.com/)### <a name="home"></a> **Contents**
 
-## Available Scripts
+1. [An app designed for bands to help organize tours](#desc)
 
-In the project directory, you can run:
+2. [Getting Started](#start)
 
-### `npm start`
+3. [User Experience](#ui) 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+4. [Tech](#tech)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+5. [Unresolved issues](#issues)
 
-### `npm test`
+6. [Future Enhancements](#stretch)## <a name="desc"></a> **Description**
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+________________PROJECT DESCRIPTION[top](#home)## <a name="start"></a> **Getting Started**
 
-### `npm run build`
+________________[LINK TO TRELLO](TRELLO LINK)[top](#home)## <a name="ui"></a> **User Experience**
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+________________**Landing**![SCREENSHOT](IMAGE PATH)**User Login**![PIC](PATH)[top](#home)## <a name="tech"></a> **Tech**
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+________________* MongoDB/Mongoose
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Express
 
-### `npm run eject`
+* React
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* Node[top](#home)## <a name="issues"></a> **Unresolved Issues**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+________________* OUTSTANDING ISSUES[top](#home)## <a name="stretch"></a> **Future Enhancements**
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
+________________* things you want to improve[top](#home)
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
