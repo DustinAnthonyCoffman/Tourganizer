@@ -68,9 +68,9 @@ The user can add shows to the tour, the shows consist of the lineup, city, addre
 
 
 Future Goals: <a name="goals"></a> 
-###Integrate Songkick Api for venue address searching
-###Display pending shows that have not been confirmed
-###Link shows collection to specific tour
-###Integrate mapping Api for route mapping
+- Integrate Songkick Api for venue address searching
+- Display pending shows that have not been confirmed
+- Link shows collection to specific tour
+- Integrate mapping Api for route mapping
 
 
