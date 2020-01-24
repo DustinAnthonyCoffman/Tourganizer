@@ -38,7 +38,7 @@ Trello: (https://trello.com/b/SQlUvKFi/tourganizer) <a name="ui"></a>
 
 * React
 
-* Node[top](#home)## <a name="issues"></a> **Unresolved Issues**
+* NodeJs
 
 * MaterialUI
 
