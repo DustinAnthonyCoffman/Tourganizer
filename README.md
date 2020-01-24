@@ -8,6 +8,8 @@
 
 4. [Tech](#tech)
 
+5. [Goals](#goals)
+
 Getting Started: <a name="start"></a> 
 
 Tourganizer allows you to create a tour
@@ -49,6 +51,6 @@ Trello: (https://trello.com/b/SQlUvKFi/tourganizer) <a name="ui"></a>
 
 
 
-Add the Songkick api for venue address retrieval (#home)
+Future Goals: <a name="goals"></a> 
 
 
