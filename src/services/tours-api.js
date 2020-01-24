@@ -5,7 +5,7 @@ export function create(tour) {
     return fetch('/api/tours', {
         method: 'POST',
         headers: {'content-type': 'application/json'},
-        body: JSON.stringify(tour)
+        body: JSON.stringify(tour) //this might need to be in brackets
     }).then(res => res.json());
 }
 

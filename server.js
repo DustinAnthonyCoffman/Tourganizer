@@ -23,7 +23,8 @@ app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
 // Put API routes here, before the "catch all" route
-app.use('/api/tours', require('./routes/api/tours'))  //gets called when we try and create a tour
+app.use('/api/tours', require('./routes/api/tours'))  
+app.use('/api/shows', require('./routes/api/shows'))  
 app.use('/api/users', require('./routes/api/users'));
 
 

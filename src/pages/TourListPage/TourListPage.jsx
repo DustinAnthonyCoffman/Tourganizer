@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import TourListItem from '../../components/TourListItem/TourListItem';
 import * as tourAPI from '../../services/tours-api';
-
+import AddShowPage from '../AddShowPage/AddShowPage'
 
 
 
@@ -11,7 +11,6 @@ class TourListPage extends Component {
       tours: this.props.tours
     }
 
-// let getTours = props.user ? {} if there is no user dont run async
 
 async componentDidMount() {
   try {
@@ -24,10 +23,12 @@ async componentDidMount() {
 }
 
 render() {
+
   return (
       <div>
         {this.state.tours.map(tour => 
           <TourListItem
+            history={this.props.history}
             userId={this.props.user._id}
             name={tour.name}
             tour={tour}

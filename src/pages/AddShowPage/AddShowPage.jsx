@@ -34,10 +34,10 @@ class AddShowPage extends Component {
         invalidForm: !this.formRef.current.checkValidity()
       });
     };
-  
+
   
   render() {
-    
+   
   return (
       <>
       <h1>Add Show</h1>
@@ -92,6 +92,11 @@ class AddShowPage extends Component {
           />
           <input type="hidden"
               name="user"
+              value={this.props.user._id}
+              onChange={this.handleChange}
+          />
+          <input type="hidden"
+              name="tourId"
               value={this.props.user._id}
               onChange={this.handleChange}
           />

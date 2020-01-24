@@ -24,7 +24,6 @@ async function index(req, res) {
 
 async function create(req, res) {
 try {
-    
    await User.findById(req.body.user._id).exec(function(err, user) {
         let {
             name
@@ -41,11 +40,6 @@ try {
         
     }
 }
-
-
-
-
-
 
 async function deleteOne(req, res) {
     try {

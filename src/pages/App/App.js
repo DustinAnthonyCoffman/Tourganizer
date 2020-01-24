@@ -68,6 +68,7 @@ class App extends Component {
     userService.logout();
     this.setState({ user: null });
   }
+
   handleSignupOrLogin = () => {
     this.setState({user: userService.getUser()});
   }
@@ -84,20 +85,21 @@ class App extends Component {
       this.setState(prevState => ({
       }))
     })
+
   }
 
   handleDeleteTour = async (id, userId) => {
     await tourAPI.deleteOne(id, userId);
     this.setState(state => ({
       tours: state.tours.filter(t => t._id !== id)
-    }), () => this.props.history.push('/'));
+    }), () => this.props.history.push('/tours'));
   }
 
   handleAddShow = async (id, userId) => {
-    await showAPI.addShow(id, userId);
+    await showAPI.addShow(id, userId);   //make an asynchronus call to the addShow function in shows-api, this will send a post request to the routes/api/shows which calls the controller
     this.setState(state => ({
       shows: state.shows.filter(s => s._id !== id)
-    }), () => this.props.history.push('/'));
+    }), () => this.props.history.push('/tours'));
   }
 
   render() {
@@ -124,7 +126,7 @@ class App extends Component {
                   />
               } />
             <Route exact path='/addShow' render={() => 
-                <AddShowPage 
+                <AddShowPage
                   tours={this.state.tours} 
                   user={this.state.user} 
                   handleAddShow={this.handleAddShow}
@@ -137,6 +139,7 @@ class App extends Component {
     );
   }
 }
+
 
 
 

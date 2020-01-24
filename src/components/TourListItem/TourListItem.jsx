@@ -13,7 +13,7 @@ import Container from '@material-ui/core/Container';
 
 
 
-function TourListItem({tour, userId, handleDeleteTour}) { 
+function TourListItem({tour, history, stateId, userId, handleDeleteTour}) { 
     
     const useStyles = makeStyles(theme => ({
         icon: {
@@ -48,6 +48,8 @@ function TourListItem({tour, userId, handleDeleteTour}) {
       }));
     const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     const classes = useStyles();
+
+
 return (
 <div>
 <Container className={classes.cardGrid} maxWidth="md">
@@ -59,7 +61,7 @@ return (
                 component="h2">
                 {tour.name}
             </Typography>
-            <NavLink exact to='/addShow' className='NavBar-link'>Add Show</NavLink> 
+                 <NavLink exact to='/addShow' className='NavBar-link'>Add Show</NavLink>  
                 <Button variant="contained" color="primary" onClick={() => handleDeleteTour(tour._id, userId)}>
                                      DELETE
                     </Button>
