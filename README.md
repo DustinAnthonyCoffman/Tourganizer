@@ -10,15 +10,16 @@
 
 6. [Future Enhancements](#stretch)## <a name="desc"></a> **Description**
 
-________________PROJECT DESCRIPTION[top](#home)## <a name="start"></a> **Getting Started**
-###Tourganizer allows you to create tours and add shows
+(#home)## <a name="start"></a> **Getting Started**
+###Tourganizer allows you to create a tour
 ![alt text](https://i.imgur.com/f3QvYdG.png)
 
+###And add shows to the tour, the shows consist of the lineup, city, address, etc.
+![alt text](https://i.imgur.com/VQ4ge7S.png)
 
 
 
-
-________________[LINK TO TRELLO](TRELLO LINK)[top](https://trello.com/b/SQlUvKFi/tourganizer)## <a name="ui"></a> **User Experience**
+(TRELLO LINK)[top](https://trello.com/b/SQlUvKFi/tourganizer)## <a name="ui"></a> **User Experience**
 
 
 
