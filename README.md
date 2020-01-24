@@ -10,17 +10,17 @@
 
 6. [Future Enhancements](#stretch)## <a name="desc"></a> **Description**
 
-###Getting Started: <a name="start"></a> 
+Getting Started: <a name="start"></a> 
 
-###Tourganizer allows you to create a tour
+Tourganizer allows you to create a tour
 ![alt text](https://i.imgur.com/f3QvYdG.png)
 
-###And add shows to the tour, the shows consist of the lineup, city, address, etc.
+The user can add shows to the tour, the shows consist of the lineup, city, address, etc.
 ![alt text](https://i.imgur.com/VQ4ge7S.png)
 
 
 
-Trello: (https://trello.com/b/SQlUvKFi/tourganizer)## <a name="ui"></a> **User Experience**
+Trello: (https://trello.com/b/SQlUvKFi/tourganizer) <a name="ui"></a> 
 
 
 
@@ -48,8 +48,6 @@ ________________**Landing**![SCREENSHOT](IMAGE PATH)**User Login**![PIC](PATH)[t
 
 
 
-
-
-________________* things you want to improve[top](#home)
+Add the Songkick api for venue address retrieval (#home)
 
 
