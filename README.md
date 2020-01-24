@@ -8,8 +8,6 @@
 
 4. [Tech](#tech)
 
-6. [Future Enhancements](#stretch)## <a name="desc"></a> **Description**
-
 Getting Started: <a name="start"></a> 
 
 Tourganizer allows you to create a tour
@@ -29,7 +27,10 @@ Trello: (https://trello.com/b/SQlUvKFi/tourganizer) <a name="ui"></a>
 
 
 
-________________**Landing**![SCREENSHOT](IMAGE PATH)**User Login**![PIC](PATH)[top](#home)## <a name="tech"></a> **Tech**
+
+
+
+<a name="tech"></a> **Tech**
 
 * MongoDb
 
