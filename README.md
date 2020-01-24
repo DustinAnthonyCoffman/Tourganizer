@@ -14,7 +14,7 @@
 
 ________________PROJECT DESCRIPTION[top](#home)## <a name="start"></a> **Getting Started**
 
-________________[LINK TO TRELLO](TRELLO LINK)[top](#home)## <a name="ui"></a> **User Experience**
+________________[LINK TO TRELLO](TRELLO LINK)[top](https://trello.com/b/SQlUvKFi/tourganizer)## <a name="ui"></a> **User Experience**
 
 ________________**Landing**![SCREENSHOT](IMAGE PATH)**User Login**![PIC](PATH)[top](#home)## <a name="tech"></a> **Tech**
 
