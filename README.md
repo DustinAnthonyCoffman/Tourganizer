@@ -12,7 +12,11 @@
 
 
 
-Tourganizer is an app designed for bands to be able to organize and create a tour by adding events with show information. <a name="desc"></a> 
+
+
+
+Description:  <a name="desc"></a> 
+Tourganizer is an app designed for bands to be able to organize and create a tour by adding events with show information.
 
 
 
@@ -20,9 +24,13 @@ Tourganizer is an app designed for bands to be able to organize and create a tou
 Getting Started: <a name="start"></a> 
 
 Tourganizer allows you to create a tour
+
+
 ![alt text](https://i.imgur.com/f3QvYdG.png)
 
 The user can add shows to the tour, the shows consist of the lineup, city, address, etc.
+
+
 ![alt text](https://i.imgur.com/VQ4ge7S.png)
 
 
