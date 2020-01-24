@@ -10,7 +10,8 @@
 
 6. [Future Enhancements](#stretch)## <a name="desc"></a> **Description**
 
-(#home)## <a name="start"></a> **Getting Started**
+###Getting Started: <a name="start"></a> 
+
 ###Tourganizer allows you to create a tour
 ![alt text](https://i.imgur.com/f3QvYdG.png)
 
@@ -19,7 +20,7 @@
 
 
 
-(TRELLO LINK)[top](https://trello.com/b/SQlUvKFi/tourganizer)## <a name="ui"></a> **User Experience**
+Trello: (https://trello.com/b/SQlUvKFi/tourganizer)## <a name="ui"></a> **User Experience**
 
 
 
