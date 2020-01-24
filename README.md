@@ -16,6 +16,7 @@
 
 
 Description:  <a name="desc"></a> 
+
 Tourganizer is an app designed for bands to be able to organize and create a tour by adding events with show information.
 
 
