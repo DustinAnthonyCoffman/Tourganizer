@@ -11,12 +11,25 @@
 6. [Future Enhancements](#stretch)## <a name="desc"></a> **Description**
 
 ________________PROJECT DESCRIPTION[top](#home)## <a name="start"></a> **Getting Started**
+###Tourganizer allows you to create tours and add shows
+![alt text](https://i.imgur.com/f3QvYdG.png)
+
+
+
+
 
 ________________[LINK TO TRELLO](TRELLO LINK)[top](https://trello.com/b/SQlUvKFi/tourganizer)## <a name="ui"></a> **User Experience**
 
+
+
+
+
+
+
+
 ________________**Landing**![SCREENSHOT](IMAGE PATH)**User Login**![PIC](PATH)[top](#home)## <a name="tech"></a> **Tech**
 
-________________* MongoDB/Mongoose
+* MongoDb
 
 * Express
 
@@ -26,12 +39,14 @@ ________________* MongoDB/Mongoose
 
 * MaterialUI
 
-* Mongoose
+* HTML/CSS
+
+* Javascript
 
 
 
 
-________________* OUTSTANDING ISSUES[top](#home)## <a name="stretch"></a> **Future Enhancements**
+
 
 ________________* things you want to improve[top](#home)
 
