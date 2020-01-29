@@ -37,7 +37,7 @@ class AddShowPage extends Component {
 
   
   render() {
-   
+
   return (
       <>
       <h1>Add Show</h1>

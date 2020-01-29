@@ -60,7 +60,8 @@ class App extends Component {
       // Initialize user if there's a token, otherwise null 
       user: userService.getUser(),
       tours: [],
-      shows: []
+      shows: [],
+      stateId: ''
     };
   }
 
@@ -95,6 +96,10 @@ class App extends Component {
     }), () => this.props.history.push('/tours'));
   }
 
+  handleHoldState = async (stateId) => {
+    this.setState(this.state.stateId)
+  }
+
   handleAddShow = async (id, userId) => {
     await showAPI.addShow(id, userId);   //make an asynchronus call to the addShow function in shows-api, this will send a post request to the routes/api/shows which calls the controller
     this.setState(state => ({
@@ -127,6 +132,7 @@ class App extends Component {
               } />
             <Route exact path='/addShow' render={() => 
                 <AddShowPage
+                  holdState={this.state.handleHoldState}
                   tours={this.state.tours} 
                   user={this.state.user} 
                   handleAddShow={this.handleAddShow}
